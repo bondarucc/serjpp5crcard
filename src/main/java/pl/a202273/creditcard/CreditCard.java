@@ -59,5 +59,9 @@ class CreditCard{
 
     }
     
+    public void repay( double count) {
+        this.balance += count;
+    }
+    
    
 }

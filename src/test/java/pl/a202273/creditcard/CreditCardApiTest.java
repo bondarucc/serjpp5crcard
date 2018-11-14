@@ -45,4 +45,11 @@ public class CreditCardApiTest{
         this.creditCardPool = new CreditCardPool ();
     }
     
+    public void handleRepay(){
+        CreditCard c = new CreditCard(cardNumber);
+        c.assignLimit(initialCredit);
+        
+        c.repay(200);
+        Assert.assertEquals(c.getBalance(), 400 );
+    }
 }
